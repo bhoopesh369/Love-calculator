@@ -13,14 +13,33 @@
 <body>
 
   
-    <p><%= percentage %>%</p>
+    <p id="per"><%= percentage %>%</p>
 
+    <form action="/">
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" class="btn btn1">Check another Match❤️</button>
           </div>
         </div>
 
-    
+    </form>    
+
+<script>
+
+let percent = '<%= percentage %>' ;
+
+document.getElementById('per').innerHTML = "" + 0 + "%";
+
+setTimeout(()=>{
+    for(let i=0; i<percent ; i++){
+       setTimeout(function(){
+       document.getElementById('per').innerHTML = "" + i + "%";
+    },30*i);
+    }
+},1600);
+
+
+</script>    
+
 </body>
 </html>

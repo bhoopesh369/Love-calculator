@@ -17,8 +17,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get("/", function(req,res){
-    // res.sendFile(__dirname + "/index.html");
-    res.render("index.ejs", {percentage: 0});
+    
+    res.render("index.ejs");
 
 });
 
